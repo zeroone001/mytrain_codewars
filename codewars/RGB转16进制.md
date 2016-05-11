@@ -1,3 +1,5 @@
+### RGB转换为16进制 ###
+```javascript
 function rgb(r, g, b)
 {
    return toHex(r)+toHex(g)+toHex(b);
@@ -21,4 +23,4 @@ function rgb2hex(rgb) {
   var decimal = Number(ds[1]) * 65536 + Number(ds[2]) * 256 + Number(ds[3]);
   return "#" + zero_fill_hex(decimal, 6);
 }
-
+```
