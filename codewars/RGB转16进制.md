@@ -4,7 +4,11 @@ function rgb(r, g, b)
 {
    return toHex(r)+toHex(g)+toHex(b);
  }
-functiontoHex(d){ if(d < 0 ) {return"00";} if(d > 255 ) {return"FF";} return ("0"+(Number(d).toString(16))).slice(-2).toUpperCase() }
+functiontoHex(d){ 
+  if(d < 0 ) {return"00";} 
+  if(d > 255 ) {return"FF";} 
+  return ("0"+(Number(d).toString(16))).slice(-2).toUpperCase() 
+ }
 //转到固定长度的十六进制字符串，不够则补0
 function zero_fill_hex(num, digits) {
   var s = num.toString(16);
