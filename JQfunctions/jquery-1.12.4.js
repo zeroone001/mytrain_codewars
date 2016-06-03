@@ -39,7 +39,7 @@
 
 
 
-	
+
 // Support: Firefox 18+
 // Can't be in strict mode, several libs including ASP.NET trace
 // the stack via arguments.caller.callee and Firefox dies if
@@ -67,8 +67,7 @@ var support = {};
 
 
 
-var
-	version = "1.12.4",
+var version = "1.12.4",
 
 	// Define a local copy of jQuery
 	jQuery = function( selector, context ) {
