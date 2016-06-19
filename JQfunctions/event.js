@@ -17,7 +17,7 @@ function returnFalse() {
 
 function safeActiveElement() {
     try {
-        return document.activeElement;
+        return document.activeElement; //返回文档中当前获取焦点的元素
     } catch (err) {}
 }
 
@@ -682,6 +682,13 @@ jQuery.event = {
         }
     }
 };
+
+
+
+
+
+
+
 
 jQuery.removeEvent = function(elem, type, handle) {
     if (elem.removeEventListener) {
