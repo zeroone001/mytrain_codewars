@@ -31,12 +31,7 @@ module.exports = {
         hot: true,
         inline: true,
         progress: true,
-        proxy: {
-            '/api/*': {
-                target: 'http://localhost:5000',
-                secure: false
-            }
-        }
+        host:"0.0.0.0"
     },
     module:{
         loaders:[

@@ -39,6 +39,8 @@ module.exports = {
             chunks: ['mobile', 'vendors'],
             inject: 'body'
         })
+        //开发过程中我们并不想将样式打在脚本中，最好可以独立生成css文件，以外链的形式加载
+
     ],
     //devServer:{
     //    historyApiFallback: true,
@@ -60,6 +62,9 @@ module.exports = {
                 include: APP_PATH
             }
         ]
+    },
+    resolve: {
+      extensions:['','.js','.jsx']
     },
     devtool: 'eval-source-map'
 };
