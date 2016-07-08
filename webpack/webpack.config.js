@@ -4,17 +4,18 @@
 var path = require('path');
 var HtmlwebpackPlugin = require('html-webpack-plugin');
 
-var ROOT_PATH = path.resolve(__dirname);
+var ROOT_PATH = path.resolve(__dirname);//从源地址到目的地址的绝对路径
 var APP_PATH = path.resolve(ROOT_PATH,'app');
 var BUILD_PATH = path.resolve(ROOT_PATH, 'build');
 module.exports = {
     entry: {
-        app: path.resolve(APP_PATH,'index.js'),
+        app: path.resolve(APP_PATH,'index.js'),//获取项目入口JS文件
         vendors: ['jquery', 'moment']
     },
     output:{
         path: BUILD_PATH,
-        filename: 'bundle.js'
+        publicPath: '',//用于配置文件的发布路径，如CDN
+        filename: '[name].js'
     },
     plugins:[
         //这个使用uglifyJs压缩你的js代码
@@ -34,6 +35,7 @@ module.exports = {
         host:"0.0.0.0"
     },
     module:{
+        //各种加载器，即各种文件格式可用require引用
         loaders:[
             {
                 test: /\.css$/,
@@ -42,5 +44,20 @@ module.exports = {
             }
         ]
     },
-    devtool: 'eval-source-map'
+    resolve:{
+        //配置别名，在项目中可以缩减引用的路径
+        alias:{
+
+        }
+    },
+    devtool: 'eval-source-map'//生成sourcemap便于开发调试
 };
+function getEntry(){
+
+}
+
+
+
+
+
+
